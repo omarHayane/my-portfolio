@@ -132,19 +132,13 @@ html {
 
 .header .group-links {
   display: flex;
-  min-width: 100px;
+  min-width: 30px;
   justify-content: space-between;
   align-items: center;
   min-height: 50px;
 }
 
-.header .group-links {
-  display: flex;
-  min-width: 100px;
-  justify-content: space-between;
-  align-items: center;
-  min-height: 50px;
-}
+
 
 .header .links {
   position: relative;
@@ -265,14 +259,6 @@ html {
   }
 }
 
-@media (max-width: 768px) {
-  .header .group-links {
-    flex-direction: column;
-    /* تغيير الاتجاه إلى عمودي */
-    align-items: flex-start;
-    /* محاذاة العناصر على اليسار */
-  }
-}
 
 
 /* end header */
@@ -381,6 +367,7 @@ html {
     text-align: center;
   }
 }
+
 
 .servisec .services-content .srv i {
   color: var(--color1);
