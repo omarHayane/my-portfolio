@@ -258,7 +258,7 @@ html {
   /* لضبط موضع الصورة في المنتصف */
   background-repeat: no-repeat;
   /* منع تكرار الصورة */
-  height: 50vh;
+  height: 65vh;
   /* ملء الشاشة بالكامل */
   position: relative;
 }
