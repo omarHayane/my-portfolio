@@ -12,7 +12,10 @@
   --color3: #e6e6e6;
   --color4: #202020;
 }
-
+.favicon {
+  width: 48px;
+  height: 48px;
+}
 html {
   scroll-behavior: smooth;
 }
@@ -24,25 +27,30 @@ html {
 
 .scroll-to-top {
   position: fixed;
-  bottom: 20px; /* المسافة من الأسفل */
-  right: 20px; /* المسافة من اليمين */
-  background-color: var(--color1); /* اللون */
-  color: white; /* لون الأيقونة */
-  border: none;
-  border-radius: 50%; /* لجعل الزر دائري */
-  padding: 4px 9px;
+  bottom: 20px;
+  /* المسافة من الأسفل */
+  right: 20px;
+  /* المسافة من اليمين */
+
+  color: var(--color1);
   cursor: pointer;
-  z-index: 1000; /* تأكد من أن الزر فوق العناصر الأخرى */
-  transition: background-color 0.3s ease; /* تأثير الانتقال */
+  z-index: 1000;
+  /* تأكد من أن الزر فوق العناصر الأخرى */
+  transition: background-color 0.3s ease;
+  text-shadow: 0 0 3px var(--color3);
+
 }
 
 .scroll-to-top:hover {
-  background-color: var(--color2); /* تغيير اللون عند التمرير فوق الزر */
-  color: white; /* لون الأيقونة عند التمرير */
+  color: var(--color2);
+  /* لون الأيقونة عند التمرير */
+  text-shadow: none;
 }
 
 .scroll-to-top i {
-  font-size: 24px; /* حجم الأيقونة */
+  font-size: 30px;
+  /* حجم الأيقونة */
+
 }
 
 .container {
@@ -89,7 +97,7 @@ html {
     background-size: cover; */
 }
 
-.special-heading + p {
+.special-heading+p {
   font-size: 20px;
   text-align: center;
   color: var(--color2);
@@ -101,7 +109,7 @@ html {
     font-size: 60px;
   }
 
-  .special-heading + p {
+  .special-heading+p {
     margin-top: -20px;
   }
 }
@@ -291,7 +299,7 @@ html {
   color: var(--color3);
 }
 
-.landing 
+.landing
 /* end landing section */
 
 /* start features */
@@ -573,6 +581,7 @@ html {
 } */
 
 @media (max-width: 991px) {
+
   .about .about-content .image::before,
   .about .about-content .image::after {
     display: none;
@@ -647,19 +656,27 @@ html {
 
 /* تنسيق الأيقونات */
 .social a {
-  font-size: 1.5em; /* حجم الأيقونة */
-  color: var(--color1); /* لون افتراضي للأيقونة */
-  margin: 0 10px; /* مسافات بين الأيقونات */
+  font-size: 1.5em;
+  /* حجم الأيقونة */
+  color: var(--color1);
+  /* لون افتراضي للأيقونة */
+  margin: 0 10px;
+  /* مسافات بين الأيقونات */
   transition: 0.3s ease;
-  text-decoration: none; /* تأثير الانتقال للـ hover */
+  text-decoration: none;
+  /* تأثير الانتقال للـ hover */
 }
 
 /* تأثير hover */
 .social a:hover {
-  color: var(--color2); /* لون عند التمرير */
-  transform: scale(1.8); /* تكبير الأيقونة */
+  color: var(--color2);
+  /* لون عند التمرير */
+  transform: scale(1.8);
+  /* تكبير الأيقونة */
 }
+
 @media (max-width: 767px) {
+
   .contact .info .link,
   .contact .info .label {
     font-size: 30px;
