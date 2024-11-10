@@ -9,6 +9,50 @@
     <link rel="stylesheet" href="./css/bootstrap-icons.css" />
     <link rel="icon" href="./img/Untitled-1.png"type="image/x-icon">
     <title>Portfolio</title>
+    
+    <script type="module">
+      // استيراد الدوال اللازمة من Firebase
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+      import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+  
+      // تهيئة إعدادات Firebase
+      const firebaseConfig = {
+        apiKey: "AIzaSyC2ygdN9DN0JZM_iSxGXYNbsJOl508JaAc",
+        authDomain: "mydata-c68f6.firebaseapp.com",
+        projectId: "mydata-c68f6",
+        storageBucket: "mydata-c68f6.firebasestorage.app",
+        messagingSenderId: "387044779542",
+        appId: "1:387044779542:web:7bbd4e7a9b0cf4ba633737",
+        measurementId: "G-83P43TS3V2"
+      };
+  
+      // تهيئة Firebase وتفعيل Firestore
+      const app = initializeApp(firebaseConfig);
+      const db = getFirestore(app);
+  
+      // وظيفة لتسجيل الزيارات
+      async function logVisit() {
+        try {
+          // إضافة مستند جديد إلى مجموعة 'visits'
+          await addDoc(collection(db, "visits"), {
+            timestamp: new Date(),          // الوقت الحالي للزيارة
+            userAgent: navigator.userAgent, // معلومات المتصفح
+            page: window.location.pathname  // الصفحة التي تمت زيارتها
+          });
+          console.log("تم تسجيل الزيارة بنجاح");
+        } catch (error) {
+          console.error("حدث خطأ أثناء تسجيل الزيارة: ", error);
+        }
+      }
+  
+      // استدعاء الوظيفة لتسجيل الزيارة عند تحميل الصفحة
+      logVisit();
+    </script>
+
+
+
+
+
   </head>
   <body style="direction: rtl">
     <div class="scroll-to-top" id="scrollToTop" style="display: none">
