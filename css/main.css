@@ -13,7 +13,7 @@
 
 :root {
   --color1: #1a1a36;
-  --color2: #0d6efd;
+  --color2: #3abee4;
   --color3: #e6e6e6;
   --color4: #202020;
 }
@@ -107,11 +107,11 @@ html {
 
 @media (max-width: 767px) {
   .special-heading {
-    font-size: 60px;
+    font-size: 50px;
   }
 
   .special-heading+p {
-    margin-top: -5px;
+    margin-top: -2px;
   }
 }
 
@@ -600,7 +600,7 @@ html {
 
 .about .about-content .text p:first-of-type {
   font-weight: bold;
-  line-height: 3;
+  line-height: 2.5;
 }
 
 .about .about-content .text hr {
@@ -610,7 +610,7 @@ html {
 }
 
 .about .about-content .text p:last-of-type {
-  line-height: 3;
+  line-height: 2.5;
 }
 
 /* end about  */
@@ -624,7 +624,7 @@ html {
 }
 
 .contact .info {
-  padding: 20px 0 50px 0;
+  padding: 20px 0 20px 0;
   text-align: center;
 }
 
@@ -681,7 +681,7 @@ html {
 
   .contact .info .link,
   .contact .info .label {
-    font-size: 30px;
+    font-size: 19px;
   }
 }
 
