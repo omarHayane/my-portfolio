@@ -99,7 +99,7 @@ const cardTitles = document.querySelectorAll(".portfolio-content .card .info h3"
 
 // تعيين عناوين جديدة لكل عنصر
 cardTitles.forEach((title, index) => {
-  title.textContent = `مشروع التصميم ${index + 1}`; // يمكنك تعديل النص ليكون ما يناسبك
+  title.textContent = `مشروع  ${index + 1}`; // يمكنك تعديل النص ليكون ما يناسبك
 });
 
 
